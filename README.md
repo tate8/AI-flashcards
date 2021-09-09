@@ -1,5 +1,5 @@
 # 2022 Individual Programming Project
-description
+description\
 TODO: include logo or graphic
 
 ## Documentation
