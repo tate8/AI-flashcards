@@ -1,5 +1,5 @@
-### Placeholder for individual project
-### not being developed
+* Placeholder for individual project
+* not being developed
 
 
 
