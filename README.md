@@ -2,7 +2,7 @@
 ## Description
 An educational website for young kids studying basic vocabulary. Simply draw a picture of the word on the front on the flashcard, and ROBOT will let you know if you drew the right picture!
 
-## Contributor(s)
+### Contributor(s)
 * Tate Larkin                                   
 
 <p align="center">
