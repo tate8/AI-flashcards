@@ -3,9 +3,13 @@ An educational website for young kids studying basic vocabulary. Simply draw a p
 
 
 <p align="center">
-    <b>Flowchart</b>
+    <b>Project Flowchart</b>
 </p>
 
 ![flowchart](https://github.com/tate8/2022IndividualProject/blob/main/images/AIFlashcards.drawio.png)
 
-## Documentation
+<p align="center">
+    <b>Website Landing Page</b>
+</p>
+
+![Landing Page](https://github.com/tate8/2022IndividualProject/blob/main/images/AIFlashcardsLandingPage.drawio.png)
