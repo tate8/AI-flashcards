@@ -1,5 +1,5 @@
 # 2022 Individual Programming Project
-description
+An educational website for young kids studying basic vocabulary. Simply draw a picture of the word on the front on the flashcard, and ROBOT will let you know if you drew the right picture!
 
 
 <p align="center">
