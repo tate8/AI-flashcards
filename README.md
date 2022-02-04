@@ -15,6 +15,7 @@ An educational website for young kids studying basic vocabulary. Simply draw a p
     <br>
     <br>
     <b>Website Flashcard Page</b>
+    <br>
     <img src="https://github.com/tate8/2022IndividualProject/blob/main/images/AIFlashcardsCardPage.png" width="800" height="600"></img>
 </p>
 
