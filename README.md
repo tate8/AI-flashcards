@@ -5,6 +5,7 @@ An educational website for young kids studying basic vocabulary. Simply draw a p
 <p align="center">
     <b>Project Flowchart</b>
 </p>
+
 ![flowchart](https://github.com/tate8/2022IndividualProject/blob/main/images/AIFlashcards.drawio.png)
 
 <p align="center">
