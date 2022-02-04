@@ -3,6 +3,6 @@ description
 
 
 ### Flowchart
-![flowchart](https://github.com/tate8/2022IndividualProject/blob/main/images/IndividualProject.drawio.png)
+![flowchart](https://github.com/tate8/2022IndividualProject/blob/main/images/AIFlashcards.drawio.png)
 
 ## Documentation
