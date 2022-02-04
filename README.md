@@ -12,4 +12,5 @@ An educational website for young kids studying basic vocabulary. Simply draw a p
     <b>Website Landing Page</b>
 </p>
 
-![Landing Page](https://github.com/tate8/2022IndividualProject/blob/main/images/AIFlashcardsLandingPage.png =300x200)
+![Landing Page](https://github.com/tate8/2022IndividualProject/blob/main/images/AIFlashcardsLandingPage.png)
+<img src="https://github.com/tate8/2022IndividualProject/blob/main/images/AIFlashcardsLandingPage.png" width="300" height="200"></img>
