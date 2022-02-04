@@ -4,12 +4,12 @@ An educational website for young kids studying basic vocabulary. Simply draw a p
 
 <p align="center">
     <b>Project Flowchart</b>
+    ![flowchart](https://github.com/tate8/2022IndividualProject/blob/main/images/AIFlashcards.drawio.png)
 </p>
 
-![flowchart](https://github.com/tate8/2022IndividualProject/blob/main/images/AIFlashcards.drawio.png)
 
 <p align="center">
     <b>Website Landing Page</b>
+    <img src="https://github.com/tate8/2022IndividualProject/blob/main/images/AIFlashcardsLandingPage.png" width="600" height="500"></img>
 </p>
 
-<img src="https://github.com/tate8/2022IndividualProject/blob/main/images/AIFlashcardsLandingPage.png" width="600" height="500"></img>
