@@ -6,6 +6,6 @@ An educational website for young kids studying basic vocabulary. Simply draw a p
     <b>Flowchart</b>
 </p>
 
-![flowchart](https://github.com/tate8/2022IndividualProject/blob/main/images/AIFlashcards.drawio.png)
+![flowchart](https://github.com/tate8/2022IndividualProject/blob/main/images/AIFlashcards (1).drawio.png)
 
 ## Documentation
