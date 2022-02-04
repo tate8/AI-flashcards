@@ -3,7 +3,7 @@ description
 
 
 <p align="center">
-    ##Flowchart
+    <b>Flowchart</b>
 </p>
 
 ![flowchart](https://github.com/tate8/2022IndividualProject/blob/main/images/AIFlashcards.drawio.png)
