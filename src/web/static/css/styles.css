@@ -1,0 +1,76 @@
+h1, h2, h3 {
+    font-family: 'Itim', serif;
+    font-weight: bolder;
+}
+
+
+body {
+    background-color: #F0F5F9;
+}
+
+.title {
+    text-align: center;
+    width: 80vw;
+    white-space: nowrap;
+
+    font-size: 3rem;
+    /* Center horizontally and vertically */
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.subtitle {
+    font-family: 'Verdana', serif;
+    font-size: 1.2rem;
+    opacity: 0.80;
+    width: 80vw;
+
+    text-align: center;
+    /* Center horizontally and vertically */
+    position: absolute;
+    top: 37.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.go-button {
+    /* Styling */
+    background-color: lightblue;
+    font-family: 'Itim', serif;
+    font-weight: bolder;
+    font-size: 2rem;
+    padding: 5px 40px 5px 40px;
+
+    /* Center horizontally and vertically */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+.go-button:hover {
+    cursor: pointer;
+}
+
+.robot-container {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+.robot-container img {
+    max-width: 300px;
+}
+
+.robot-container .robot-arrow {
+    opacity: 0.80;
+    position: absolute;
+    top: 50%;
+    right: 350px;
+    width: fit-content;
+}
+.robot-container .robot-arrow i {
+    font-size: 5rem;
+}
+.robot-container .robot-arrow h3 {
+}
