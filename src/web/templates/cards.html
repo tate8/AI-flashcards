@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>AI Flashcards</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap" rel="stylesheet">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+    </head>
+    <body>        
+
+        <div class="back-to-home">
+            <a href="{{ url_for('index') }}"><i class="fa fa-arrow-left"></i></a>
+        </div>
+
+        <div class="flashcard-container">
+            
+            
+            <canvas class="paint-canvas"></canvas>
+
+
+            <div class="flashcard">
+                <div class="word">
+                    <h1>{{ word }}</h1>
+                </div>
+                <div class="tools">
+                    <i class="fa fa-eraser eraser"></i>
+                    <i class="fa fa-pencil pencil active"></i>
+                    <i class="fa fa-repeat clear"></i>
+                </div>
+                <div class="new-word">
+                    <a href="/cards">New</a>
+                </div>
+                <div class="check-word">
+                    <a href="/cards">Check</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="robot-top-container">
+            <img src="{{ url_for('static', filename='img/robot-top.png') }}" alt="">
+
+            <div class="robot-dialogue">
+                <h3>{{ message }}</h3>
+            </div>
+        </div>
+
+    </body>
+
+    <script src="../static/js/cards.js"></script>
+ 
+</html>
