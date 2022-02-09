@@ -30,13 +30,13 @@
         </div>
 
         <div class="go-button">
-            <a href="/">Go!</a>
+            <a href="{{ url_for('cards') }}">Go!</a>
         </div>
 
         <div class="robot-container">
             <img src="{{ url_for('static', filename='img/robot.png') }}" alt="">
             <div class="robot-arrow">
-                <h3>ROBOT</h3><i class="fa fa-arrow-right"></i>
+                <h3>ROBOT<i class="fa fa-arrow-right"></i></h3>
             </div>
         </div>
     </body>
