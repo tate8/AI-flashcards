@@ -97,13 +97,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-
-    /* for aspect ratio */
 }
 
 .flashcard {
-    width: 40vw;
-    aspect-ratio: 7/5;
+    width: 35vw;
+    aspect-ratio: 1/1;
     border: 4px solid black;
     border-radius: 15px;
     background-color: #fff;
