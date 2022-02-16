@@ -11,7 +11,7 @@ An educational website for young kids 4-10 years old studying basic vocabulary. 
 </p>
 
 #### Machine learning model
-\tI decided to use Google's ResNet-34 Neural Network architecture for this project. This architecture utilizes Residual Learning, where you add a skip connection between different layers in the net. A block of two convolution layers with another single convolution layer which connects to the output of the two layers is called a Residual Unit. This architecture uses deep layers of Residual Units with doubling feature maps and halfing dimensions. This lets the model learn very complex patterns with less complexity and memory overhead.
+    I decided to use Google's ResNet-34 Neural Network architecture for this project. This architecture utilizes Residual Learning, where you add a skip connection between different layers in the net. A block of two convolution layers with another single convolution layer which connects to the output of the two layers is called a Residual Unit. This architecture uses deep layers of Residual Units with doubling feature maps and halfing dimensions. This lets the model learn very complex patterns with less complexity and memory overhead.
 <br>
 <br>
 In addition, I used early stopping to reduce overfitting, and Nadam optimization.
