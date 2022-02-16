@@ -25,12 +25,12 @@ In addition, I used early stopping to reduce overfitting, and Nadam optimization
 <p align="center">
     <b>Website Landing Page</b>
     <br>
-    <img src="https://github.com/tate8/2022IndividualProject/blob/main/images/AIFlashcardsLandingPage.png" width="800" height="600"></img>
+    <img src="https://github.com/tate8/2022IndividualProject/blob/main/images/AIFlashcardsLandingPage.png" width="700" height="500"></img>
     <br>
     <br>
     <b>Website Flashcard Page</b>
     <br>
-    <img src="https://github.com/tate8/2022IndividualProject/blob/main/images/AIFlashcardsCardPage.png" width="800" height="600"></img>
+    <img src="https://github.com/tate8/2022IndividualProject/blob/main/images/AIFlashcardsCardPage.png" width="700" height="500"></img>
 </p>
 
 <p>
@@ -40,10 +40,10 @@ In addition, I used early stopping to reduce overfitting, and Nadam optimization
 <p align="center">
     <b>Website Landing Page</b>
     <br>
-    <img src="https://github.com/tate8/2022IndividualProject/blob/main/images/FlashcardsLandingPageImpl.png" height="600"></img>
+    <img src="https://github.com/tate8/2022IndividualProject/blob/main/images/FlashcardsLandingPageImpl.png" height="400"></img>
     <br>
     <br>
     <b>Website Flashcard Page</b>
     <br>
-    <img src="https://github.com/tate8/2022IndividualProject/blob/main/images/FlashcardsCardPageImpl.png" height="600"></img>
+    <img src="https://github.com/tate8/2022IndividualProject/blob/main/images/FlashcardsCardPageImpl.png" height="400"></img>
 </p>
