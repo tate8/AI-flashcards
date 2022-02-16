@@ -33,3 +33,6 @@ In addition, I used early stopping to reduce overfitting, and Nadam optimization
     <img src="https://github.com/tate8/2022IndividualProject/blob/main/images/AIFlashcardsCardPage.png" width="800" height="600"></img>
 </p>
 
+<p>
+    <h1>Project Implementation</h1>
+</p>
