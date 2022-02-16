@@ -36,3 +36,14 @@ In addition, I used early stopping to reduce overfitting, and Nadam optimization
 <p>
     <h1>Project Implementation</h1>
 </p>
+
+<p align="center">
+    <b>Website Landing Page</b>
+    <br>
+    <img src="https://github.com/tate8/2022IndividualProject/blob/main/images/FlashcardsLandingPageImpl.png" width="800" height="600"></img>
+    <br>
+    <br>
+    <b>Website Flashcard Page</b>
+    <br>
+    <img src="https://github.com/tate8/2022IndividualProject/blob/main/images/FlashcardsCardPageImpl.png" width="800" height="600"></img>
+</p>
