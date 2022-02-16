@@ -5,8 +5,15 @@ An educational website for young kids studying basic vocabulary. Simply draw a p
 ### Contributor(s)
 * Tate Larkin                                   
 
+
 <p align="center">
-    <b>Project Flowchart</b>
+    <h1>Project Design</h1>
+</p>
+
+### Machine learning workflow
+
+<p align="center">
+    <b>Logic Flowchart</b>
 </p>
 
 ![flowchart](https://github.com/tate8/2022IndividualProject/blob/main/images/AIFlashcards.drawio.png)
