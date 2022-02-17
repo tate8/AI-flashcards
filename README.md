@@ -1,7 +1,7 @@
 # AI Flashcards - 2022 Individual Programming Project
 <p align="center">
 
-    https://user-images.githubusercontent.com/70344865/154580547-331d0d24-11e0-476e-9bff-ebb0b1cb952a.mov
+    <img src="https://github.com/tate8/2022IndividualProject/blob/main/images/AIFlashcardsDemo.mov" width="700" height="500"></img>
 
 </p>
 ## Description
