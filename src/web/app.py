@@ -119,8 +119,10 @@ def get_post_pixel_data():
     class_predictions = my_tf_saved_model.predict(model_input)
     # get top 5 predict indices
     predict_indices = np.argsort(class_predictions, axis=1)[:, -5:]
+    top_prediction_idx = np.argmax(class_predictions, axis=-1)
+    top_prediction = class_names[top_prediction_idx[0]]
     predict_classes = [class_names[i] for i in predict_indices[0]]
-    print(predict_classes)
+
 
     ##### UPDATE MESSAGE
 
@@ -137,7 +139,7 @@ def get_post_pixel_data():
     if word in predict_classes:
         message = 'Nice, you got it right!'
     else:
-        message = f'Hmm, your {word} looks like a {predict_classes}. Try again!'
+        message = f'Hmm, your {word} looks like a {top_prediction}. Try again!'
 
     data = {
         'word': word,
