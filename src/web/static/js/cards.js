@@ -64,15 +64,7 @@ const drawLine = event =>
         context.beginPath();
         context.strokeStyle = 'black'
         context.lineCap = 'round';
-<<<<<<< HEAD
-<<<<<<< HEAD
-        context.lineWidth = 15;
-=======
         context.lineWidth = 20;
->>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
-=======
-        context.lineWidth = 20;
->>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
         context.moveTo( x, y );
         context.lineTo( newX, newY );
         context.stroke();
@@ -96,13 +88,6 @@ const drawLine = event =>
     }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
-=======
->>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
 paintCanvas.addEventListener( 'mousedown', startDrawing );
 paintCanvas.addEventListener( 'mousemove', drawLine );
 paintCanvas.addEventListener( 'mouseup', stopDrawing );
@@ -113,58 +98,27 @@ function checkButtonClicked()
     let canvasHeight = context.canvas.clientHeight;
     let canvasWidth = context.canvas.clientWidth;
     let imageData = context.getImageData(0, 0, canvasWidth, canvasHeight);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
- 
->>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
-=======
- 
->>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
     let greyImageData = []
 
     // each pixel in image data is              [R, G, B, A]
     // all black pixels are represented as      [0, 0, 0, 255]
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // this just parses out all the alpha channels and stores them into greyImageData
-    console.log(imageData)
-=======
     // this just parses out the all black pixels and stores them into greyImageData
->>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
-=======
-    // this just parses out the all black pixels and stores them into greyImageData
->>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
     for (let i = 3; i < imageData.data.length; i += 4) {
         let greyPixel = imageData.data[i]
 
         greyImageData.push(greyPixel)
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
-=======
->>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
     // send an ajax POST request to my flask server with all the pixel data
     $.ajax({
         url: '/post-pixel-data',
         type: 'POST',
         ContentType: 'application/json',
         data: {data: greyImageData}
-<<<<<<< HEAD
-<<<<<<< HEAD
       }).done(function()
       { // reload page
         window.location.href = '/cards';
-=======
->>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
-=======
->>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
       }).fail(function(jqXHR, textStatus, errorThrown)
       { // if ajax POST request fails
         alert('Something went wrong. error: ' + errorThrown);
