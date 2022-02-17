@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 from flask import Flask, render_template, redirect, url_for, request, session
+=======
+from flask import Flask, render_template, redirect, url_for, request
+>>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
 =======
 from flask import Flask, render_template, redirect, url_for, request
 >>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
@@ -8,6 +12,7 @@ import json
 import numpy as np
 import cv2
 import math
+<<<<<<< HEAD
 <<<<<<< HEAD
 import os
 import tensorflow as tf
@@ -44,10 +49,16 @@ def read_storage():
 
 app = Flask(__name__)
 >>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
+=======
+
+
+app = Flask(__name__)
+>>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
 
 
 @app.route('/')
 def index():
+<<<<<<< HEAD
 <<<<<<< HEAD
     # get random word on website load
     word = get_random_word()
@@ -81,6 +92,8 @@ def cards():
     word = data['word']
     message = data['message']
 =======
+=======
+>>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
     return render_template('index.html')
 
 @app.route('/cards')
@@ -92,6 +105,9 @@ def cards():
 
     # message to be displayed as what ROBOT is saying
     message = f'Can you draw {word}?'
+<<<<<<< HEAD
+>>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
+=======
 >>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
 
     return render_template('cards.html', word=word, message=message)
@@ -99,8 +115,11 @@ def cards():
 @app.route('/post-pixel-data', methods=['GET', 'POST'])
 def get_post_pixel_data():
 <<<<<<< HEAD
+<<<<<<< HEAD
     ##### PROCESS IMAGE
 
+=======
+>>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
 =======
 >>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
     # get image pixel data from post request
@@ -110,22 +129,29 @@ def get_post_pixel_data():
     # change to numpy array
     image = np.array(image, dtype=np.uint8)
 <<<<<<< HEAD
+<<<<<<< HEAD
     # reshape flattened image to a square
     side_len = int(math.sqrt(image.shape[0]))
 
     # image = np.resize(image, (side_len, side_len))
     image.resize((side_len, side_len))
 =======
+=======
+>>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
 
     # reshape flattened image to a square
     side_len = int(math.sqrt(image.shape[0]))
     image = np.resize(image, (side_len, side_len))
+<<<<<<< HEAD
+>>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
+=======
 >>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
 
     # now resize it to 28x28 which the machine learning model accepts
     # using openCV for the resizing
     resized_image = cv2.resize(image, dsize=(28, 28), interpolation=cv2.INTER_CUBIC)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     model_input = np.array(resized_image, dtype=np.uint8).reshape((-1, 28, 28))
 
@@ -179,6 +205,11 @@ def get_post_pixel_data():
     write_storage(data)
 
     return ' '
+=======
+    print(resized_image)
+
+    return {'data': data}
+>>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
 =======
     print(resized_image)
 

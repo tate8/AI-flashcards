@@ -65,7 +65,11 @@ const drawLine = event =>
         context.strokeStyle = 'black'
         context.lineCap = 'round';
 <<<<<<< HEAD
+<<<<<<< HEAD
         context.lineWidth = 15;
+=======
+        context.lineWidth = 20;
+>>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
 =======
         context.lineWidth = 20;
 >>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
@@ -93,7 +97,10 @@ const drawLine = event =>
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
 =======
 >>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
 paintCanvas.addEventListener( 'mousedown', startDrawing );
@@ -107,7 +114,11 @@ function checkButtonClicked()
     let canvasWidth = context.canvas.clientWidth;
     let imageData = context.getImageData(0, 0, canvasWidth, canvasHeight);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
 =======
  
 >>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
@@ -117,8 +128,12 @@ function checkButtonClicked()
     // all black pixels are represented as      [0, 0, 0, 255]
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     // this just parses out all the alpha channels and stores them into greyImageData
     console.log(imageData)
+=======
+    // this just parses out the all black pixels and stores them into greyImageData
+>>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
 =======
     // this just parses out the all black pixels and stores them into greyImageData
 >>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
@@ -129,7 +144,10 @@ function checkButtonClicked()
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
 =======
 >>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
     // send an ajax POST request to my flask server with all the pixel data
@@ -139,9 +157,12 @@ function checkButtonClicked()
         ContentType: 'application/json',
         data: {data: greyImageData}
 <<<<<<< HEAD
+<<<<<<< HEAD
       }).done(function()
       { // reload page
         window.location.href = '/cards';
+=======
+>>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
 =======
 >>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
       }).fail(function(jqXHR, textStatus, errorThrown)

@@ -4,10 +4,15 @@ h1, h2, h3 {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 html, body {
     background-color: #F0F5F9;
     margin: 0;
     height: 100%;
+=======
+body {
+    background-color: #F0F5F9;
+>>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
 =======
 body {
     background-color: #F0F5F9;
@@ -108,8 +113,12 @@ body {
 
 .flashcard {
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 30vw;
     min-width: 15rem;
+=======
+    width: 35vw;
+>>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
 =======
     width: 35vw;
 >>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
@@ -125,7 +134,11 @@ body {
 
 .word {
 <<<<<<< HEAD
+<<<<<<< HEAD
     font-size: 1.5em;
+=======
+    font-size: 1.5rem;
+>>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
 =======
     font-size: 1.5rem;
 >>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
@@ -134,7 +147,10 @@ body {
     top: -6.5rem;
     transform: translate(-50%, 0);
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: max-content;
+=======
+>>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
 =======
 >>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
 }
@@ -157,16 +173,22 @@ body {
     padding: 5px 40px 5px 40px;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     font-size: 1.5em;
     position: absolute;
     right: 0;
     bottom: -5rem;
 =======
+=======
+>>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
     font-size: 1.5rem;
     position: absolute;
     left: 50%;
     bottom: -5rem;
     transform: translate(75%, 0);
+<<<<<<< HEAD
+>>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
+=======
 >>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
 }
 
@@ -179,16 +201,22 @@ body {
     padding: 5px 40px 5px 40px;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     font-size: 1.5em;
     position: absolute;
     left: 0;
     bottom: -5rem;
 =======
+=======
+>>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
     font-size: 1.5rem;
     position: absolute;
     left: 0%;
     bottom: -5rem;
     transform: translate(25%, 0);
+<<<<<<< HEAD
+>>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
+=======
 >>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
 }
 
@@ -214,8 +242,12 @@ body {
 }
 .robot-top-container img {
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 50vw;
     max-width: 15rem;
+=======
+    max-width: 300px;
+>>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
 =======
     max-width: 300px;
 >>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
@@ -233,6 +265,7 @@ body {
 
 .robot-dialogue {
     position: absolute;
+<<<<<<< HEAD
 <<<<<<< HEAD
     font-size: 2em;
     top: 28%;
@@ -254,9 +287,14 @@ body {
         bottom: 3vh;
     }
 =======
+=======
+>>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
     font-size: 2rem;
     top: 35%;
     right: 22vw;
     white-space: nowrap;
+<<<<<<< HEAD
+>>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
+=======
 >>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
 }
