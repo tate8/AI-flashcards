@@ -1,7 +1,7 @@
 # AI Flashcards - 2022 Individual Programming Project
 <p align="center">
 
-    ![Project Demo](https://user-images.githubusercontent.com/70344865/154580547-331d0d24-11e0-476e-9bff-ebb0b1cb952a.mov)
+    https://user-images.githubusercontent.com/70344865/154580547-331d0d24-11e0-476e-9bff-ebb0b1cb952a.mov
 
 </p>
 ## Description
