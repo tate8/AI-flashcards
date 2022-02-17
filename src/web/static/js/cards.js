@@ -64,7 +64,7 @@ const drawLine = event =>
         context.beginPath();
         context.strokeStyle = 'black'
         context.lineCap = 'round';
-        context.lineWidth = 20;
+        context.lineWidth = 15;
         context.moveTo( x, y );
         context.lineTo( newX, newY );
         context.stroke();
@@ -88,6 +88,7 @@ const drawLine = event =>
     }
 }
 
+
 paintCanvas.addEventListener( 'mousedown', startDrawing );
 paintCanvas.addEventListener( 'mousemove', drawLine );
 paintCanvas.addEventListener( 'mouseup', stopDrawing );
@@ -98,18 +99,20 @@ function checkButtonClicked()
     let canvasHeight = context.canvas.clientHeight;
     let canvasWidth = context.canvas.clientWidth;
     let imageData = context.getImageData(0, 0, canvasWidth, canvasHeight);
- 
+
     let greyImageData = []
 
     // each pixel in image data is              [R, G, B, A]
     // all black pixels are represented as      [0, 0, 0, 255]
 
-    // this just parses out the all black pixels and stores them into greyImageData
+    // this just parses out all the alpha channels and stores them into greyImageData
+    console.log(imageData)
     for (let i = 3; i < imageData.data.length; i += 4) {
         let greyPixel = imageData.data[i]
 
         greyImageData.push(greyPixel)
     }
+
 
     // send an ajax POST request to my flask server with all the pixel data
     $.ajax({
@@ -117,6 +120,9 @@ function checkButtonClicked()
         type: 'POST',
         ContentType: 'application/json',
         data: {data: greyImageData}
+      }).done(function()
+      { // reload page
+        window.location.href = '/cards';
       }).fail(function(jqXHR, textStatus, errorThrown)
       { // if ajax POST request fails
         alert('Something went wrong. error: ' + errorThrown);

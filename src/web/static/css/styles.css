@@ -3,8 +3,10 @@ h1, h2, h3 {
     font-weight: bolder;
 }
 
-body {
+html, body {
     background-color: #F0F5F9;
+    margin: 0;
+    height: 100%;
 }
 
 /* LANDING PAGE */
@@ -100,7 +102,8 @@ body {
 }
 
 .flashcard {
-    width: 35vw;
+    width: 30vw;
+    min-width: 15rem;
     aspect-ratio: 1/1;
     border: 4px solid black;
     border-radius: 15px;
@@ -112,11 +115,12 @@ body {
 }
 
 .word {
-    font-size: 1.5rem;
+    font-size: 1.5em;
     position: absolute;
     left: 50%;
     top: -6.5rem;
     transform: translate(-50%, 0);
+    width: max-content;
 }
 
 .tools {
@@ -136,11 +140,10 @@ body {
     font-size: 2rem;
     padding: 5px 40px 5px 40px;
 
-    font-size: 1.5rem;
+    font-size: 1.5em;
     position: absolute;
-    left: 50%;
+    right: 0;
     bottom: -5rem;
-    transform: translate(75%, 0);
 }
 
 .check-word {
@@ -151,11 +154,10 @@ body {
     font-size: 2rem;
     padding: 5px 40px 5px 40px;
 
-    font-size: 1.5rem;
+    font-size: 1.5em;
     position: absolute;
-    left: 0%;
+    left: 0;
     bottom: -5rem;
-    transform: translate(25%, 0);
 }
 
 .check-word:hover {
@@ -179,7 +181,8 @@ body {
     right: 0;
 }
 .robot-top-container img {
-    max-width: 300px;
+    width: 50vw;
+    max-width: 15rem;
 }
 
 .paint-canvas {
@@ -194,8 +197,23 @@ body {
 
 .robot-dialogue {
     position: absolute;
-    font-size: 2rem;
-    top: 35%;
-    right: 22vw;
+    font-size: 2em;
+    top: 28%;
+    right: 10em;
     white-space: nowrap;
+}
+
+
+@media only screen and (max-width: 750px) {
+    .robot-dialogue {
+        font-size: 1.5rem;
+    }
+}
+@media only screen and (max-width: 420px) {
+    .robot-dialogue {
+        font-size: 1rem;
+    }
+    .robot-top-container {
+        bottom: 3vh;
+    }
 }
