@@ -3,10 +3,15 @@ h1, h2, h3 {
     font-weight: bolder;
 }
 
+<<<<<<< HEAD
 html, body {
     background-color: #F0F5F9;
     margin: 0;
     height: 100%;
+=======
+body {
+    background-color: #F0F5F9;
+>>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
 }
 
 /* LANDING PAGE */
@@ -102,8 +107,12 @@ html, body {
 }
 
 .flashcard {
+<<<<<<< HEAD
     width: 30vw;
     min-width: 15rem;
+=======
+    width: 35vw;
+>>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
     aspect-ratio: 1/1;
     border: 4px solid black;
     border-radius: 15px;
@@ -115,12 +124,19 @@ html, body {
 }
 
 .word {
+<<<<<<< HEAD
     font-size: 1.5em;
+=======
+    font-size: 1.5rem;
+>>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
     position: absolute;
     left: 50%;
     top: -6.5rem;
     transform: translate(-50%, 0);
+<<<<<<< HEAD
     width: max-content;
+=======
+>>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
 }
 
 .tools {
@@ -140,10 +156,18 @@ html, body {
     font-size: 2rem;
     padding: 5px 40px 5px 40px;
 
+<<<<<<< HEAD
     font-size: 1.5em;
     position: absolute;
     right: 0;
     bottom: -5rem;
+=======
+    font-size: 1.5rem;
+    position: absolute;
+    left: 50%;
+    bottom: -5rem;
+    transform: translate(75%, 0);
+>>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
 }
 
 .check-word {
@@ -154,10 +178,18 @@ html, body {
     font-size: 2rem;
     padding: 5px 40px 5px 40px;
 
+<<<<<<< HEAD
     font-size: 1.5em;
     position: absolute;
     left: 0;
     bottom: -5rem;
+=======
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0%;
+    bottom: -5rem;
+    transform: translate(25%, 0);
+>>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
 }
 
 .check-word:hover {
@@ -181,8 +213,12 @@ html, body {
     right: 0;
 }
 .robot-top-container img {
+<<<<<<< HEAD
     width: 50vw;
     max-width: 15rem;
+=======
+    max-width: 300px;
+>>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
 }
 
 .paint-canvas {
@@ -197,6 +233,7 @@ html, body {
 
 .robot-dialogue {
     position: absolute;
+<<<<<<< HEAD
     font-size: 2em;
     top: 28%;
     right: 10em;
@@ -216,4 +253,10 @@ html, body {
     .robot-top-container {
         bottom: 3vh;
     }
+=======
+    font-size: 2rem;
+    top: 35%;
+    right: 22vw;
+    white-space: nowrap;
+>>>>>>> 991e8faedbd6d07713d6b15d1f9b424465cd45b7
 }
