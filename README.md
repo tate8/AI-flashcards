@@ -1,4 +1,5 @@
 # AI Flashcards - 2022 Individual Programming Project
+![Project Demo](https://github.com/tate8/2022IndividualProject/blob/main/images/AIFlashcardsDemo.gif)
 ## Description
 An educational website for young kids 4-10 years old studying basic vocabulary. Simply draw a picture of the word on the front on the flashcard, and ROBOT will let you know if you drew the right picture!
 
