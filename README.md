@@ -22,6 +22,10 @@ An educational website for young kids studying basic vocabulary. Simply draw a p
 <br>
 <br>
 In addition, I used early stopping to reduce overfitting, and Nadam optimization.
+<br>
+<br>
+### Dataset
+&emsp;I used Google's [Quick, Draw! dataset](https://github.com/googlecreativelab/quickdraw-dataset). This included about 50 million 28x28 greyscale images composed of 350 categories of various objects, simply hand drawn.
 
 <p align="center">
     <b>Logic Flowchart</b>
