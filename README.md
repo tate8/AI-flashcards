@@ -5,7 +5,7 @@ https://user-images.githubusercontent.com/70344865/154581107-c2047ecf-4139-4b5c-
 
 
 ## Description
-An educational website for young kids 4-10 years old studying basic vocabulary. Simply draw a picture of the word on the front on the flashcard, and ROBOT will let you know if you drew the right picture!
+An educational website for young kids studying basic vocabulary. Simply draw a picture of the word on the front on the flashcard, and ROBOT will let you know if you drew the right picture!
 
 ### Contributor(s)
 * Tate Larkin                                   
