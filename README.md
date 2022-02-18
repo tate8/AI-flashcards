@@ -1,7 +1,9 @@
 # AI Flashcards - 2022 Individual Programming Project
 
 
-https://user-images.githubusercontent.com/70344865/154581107-c2047ecf-4139-4b5c-8e6a-e3d75f0fc481.mov
+
+https://user-images.githubusercontent.com/70344865/154613211-187687a4-fc1a-42ce-a1e2-699280c129bd.mp4
+
 
 
 ## Description
