@@ -137,7 +137,9 @@ def get_post_pixel_data():
     word = word.rstrip()
 
     if word in predict_classes:
+        # get new word if they got it right
         message = 'Nice, you got it right!'
+        
     else:
         message = f'Hmm, your {word} looks like a {top_prediction}. Try again!'
 

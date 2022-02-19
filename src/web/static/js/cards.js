@@ -93,8 +93,16 @@ paintCanvas.addEventListener( 'mousemove', drawLine );
 paintCanvas.addEventListener( 'mouseup', stopDrawing );
 paintCanvas.addEventListener( 'mouseout', stopDrawing );
 
+
+let checkButton = document.querySelector('.check-word');
+checkButton.addEventListener( 'click', checkButtonClicked);
+
+
 function checkButtonClicked()
 {
+    // set robot dialogue to ... to look like its thinking
+    document.getElementById("robot-dialogue").textContent=". . .";
+
     let canvasHeight = context.canvas.clientHeight;
     let canvasWidth = context.canvas.clientWidth;
     let imageData = context.getImageData(0, 0, canvasWidth, canvasHeight);
@@ -125,5 +133,3 @@ function checkButtonClicked()
       });
 }
 
-let checkButton = document.querySelector('.check-word');
-checkButton.addEventListener( 'click', checkButtonClicked);
