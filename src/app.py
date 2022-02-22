@@ -36,8 +36,6 @@ def read_storage():
         data = json.load(j_file)
     return data
 
-app = Flask(__name__)
-
 
 @app.route('/')
 def index():
