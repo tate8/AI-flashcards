@@ -31,7 +31,7 @@ In addition, I used early stopping to reduce overfitting, and Nadam optimization
     <b>Logic Flowchart</b>
 </p>
 
-![flowchart](https://github.com/tate8/2022IndividualProject/blob/main/images/AIFlashcards.drawio.png)
+![flowchart](https://github.com/tate8/2022IndividualProject/blob/main/images/AIFlashcards.png)
 
 <p align="center">
     <b>Website Landing Page</b>
