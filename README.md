@@ -17,6 +17,14 @@ An educational website for young kids studying basic vocabulary. Simply draw a p
     <h1>Project Design</h1>
 </p>
 
+### Technologies
+* Flask
+* Jinja
+* Tensorflow
+* Keras
+* Numpy
+* Matplotlib
+
 ### Machine learning model
 &emsp;I decided to use Google's ResNet-34 Neural Network architecture for this project. This architecture utilizes Residual Learning, where you add a skip connection between different layers in the net. A block of two convolution layers with another single convolution layer which connects to the output of the two layers is called a Residual Unit. This architecture uses deep layers of Residual Units with doubling feature maps and halfing dimensions. This lets the model learn very complex patterns faster, with less memory overhead.
 <br>
