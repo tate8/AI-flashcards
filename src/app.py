@@ -93,6 +93,7 @@ def get_post_pixel_data():
     # using openCV for the resizing
     resized_image = cv2.resize(image, dsize=(28, 28), interpolation=cv2.INTER_CUBIC)
 
+    # create numpy array of shape (1, 28, 28) for model
     model_input = np.array(resized_image, dtype=np.uint8).reshape((-1, 28, 28))
 
     # debugging: this is what the model is accepting as input
@@ -135,9 +136,7 @@ def get_post_pixel_data():
     word = word.rstrip()
 
     if word in predict_classes:
-        # get new word if they got it right
-        message = 'Nice, you got it right!'
-        
+        message = 'Nice, you got it right!'        
     else:
         message = f'Hmm, your {word} looks like a {top_prediction}. Try again!'
 
