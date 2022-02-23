@@ -97,22 +97,22 @@ def get_post_pixel_data():
     model_input = np.array(resized_image, dtype=np.uint8).reshape((-1, 28, 28))
 
     # debugging: this is what the model is accepting as input
-    for i in range(28):
-        for j in range(28):
-            if model_input[0, i, j] < 10:
-                print(model_input[0, i, j], end="")
-                print("   ", end="")
-            elif model_input[0, i, j] < 100:
-                print(model_input[0, i, j], end="")
-                print("  ", end="")
-            else:
-                print(model_input[0, i, j], end="")
-                print(" ", end="")
-        print('')
+    # for i in range(28):
+    #     for j in range(28):
+    #         if model_input[0, i, j] < 10:
+    #             print(model_input[0, i, j], end="")
+    #             print("   ", end="")
+    #         elif model_input[0, i, j] < 100:
+    #             print(model_input[0, i, j], end="")
+    #             print("  ", end="")
+    #         else:
+    #             print(model_input[0, i, j], end="")
+    #             print(" ", end="")
+    #     print('')
 
     class_names = None
     # these class names' order are compatible with the model
-    with open('class_names.txt') as f:
+    with open('categories.txt') as f:
         class_names = f.readlines()
 
     class_predictions = my_tf_saved_model.predict(model_input)
