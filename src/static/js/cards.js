@@ -61,6 +61,8 @@ const drawLine = event =>
     {
         const newX = event.offsetX;
         const newY = event.offsetY;
+        // default: put new things over old things
+        context.globalCompositeOperation = 'source-over';
         context.beginPath();
         context.strokeStyle = 'black'
         context.lineCap = 'round';
@@ -76,15 +78,16 @@ const drawLine = event =>
     {
         const newX = event.offsetX;
         const newY = event.offsetY;
+
+        clearSize = 20
+        
+        // existing content is kept where it doesn't overlap the new shape
+        // so this basically 'cuts out' a circle with radius 20 from the canvas
+        context.globalCompositeOperation = 'destination-out';
         context.beginPath();
-        context.strokeStyle = 'white'   // drawing white to 'erase'
-        context.lineCap = 'round';
-        context.lineWidth = 30;         // slightly bigger
-        context.moveTo( x, y );
-        context.lineTo( newX, newY );
-        context.stroke();
-        x = newX;
-        y = newY;
+        context.arc(newX, newY, clearSize, 0, 2*Math.PI, false);
+        context.fill();
+        context.restore();
     }
 }
 
@@ -101,7 +104,7 @@ checkButton.addEventListener( 'click', checkButtonClicked);
 function checkButtonClicked()
 {
     // set robot dialogue to ... to look like its thinking
-    document.getElementById("robot-dialogue").textContent=". . .";
+    document.getElementById("robot-dialogue").textContent = ". . .";
 
     let canvasHeight = context.canvas.clientHeight;
     let canvasWidth = context.canvas.clientWidth;
@@ -124,12 +127,91 @@ function checkButtonClicked()
         type: 'POST',
         ContentType: 'application/json',
         data: {data: greyImageData}
-      }).done(function()
+      }).done(function(status) // status from server
       { // reload page
-        window.location.href = '/cards';
+        if (status == 'success')
+        {
+            // changing the robot dialogue like we would in the server
+            document.getElementById("robot-dialogue").textContent = "Nice, you got it right!";
+            setTimeout(() => {window.location.href = '/new-word';}, 1500)
+        }
+        else
+        {
+            window.location.href = '/cards';
+        }
+                
       }).fail(function(jqXHR, textStatus, errorThrown)
       { // if ajax POST request fails
         alert('Something went wrong. error: ' + errorThrown);
       });
 }
+
+
+
+// FlIP FUNCTIONALITY
+
+$(".flip-container").flip({
+    trigger: "manual"
+  });
+
+$(".enter-help").click(function() {
+    $(this).closest(".flip-container").flip(true);
+});
+
+$(".exit-help").click(function() {
+    $(this).closest(".flip-container").flip(false);
+});
+
+
+// LABEL CANVAS
+function drawLabelCanvas(pixelData)
+{
+    // get handle to canvas element
+    const labelCanvas = document.querySelector( '.label-canvas' );
+    const ctx = labelCanvas.getContext( '2d' );
+
+    // get flashcard dimensions and set canvas's dimensions to them
+    width = document.querySelector('.flashcard').clientWidth;
+    height = document.querySelector('.flashcard').clientHeight;
+    ctx.canvas.width = width;
+    ctx.canvas.height = height;
+
+    pixel_len = Math.floor(width / 28);
+
+    // draw pixel data to screen
+    for (let i = 0; i < 28; i++)
+    {
+        for (let j = 0; j < 28; j++)
+        {
+            if (pixelData[j][i] > 0)
+            {
+                ctx.beginPath();
+                ctx.fillStyle = "black";
+                ctx.rect(pixel_len*i, pixel_len*j, pixel_len, pixel_len);
+                ctx.fill();
+            }
+        }
+    }
+}
+
+function helpButtonClicked()
+{
+    $.get("/get-label-data", function(data, status){
+        let labelData = data;
+    
+        // reshape label data
+        reshapedLabelData = []
+        for (let i = 0; i < 28; i++)
+        {
+            row = labelData.slice(i*28, (i+1)*28)
+            reshapedLabelData.push(row)
+        }
+        drawLabelCanvas(reshapedLabelData)
+
+     });
+}
+
+helpButton = document.querySelector('.enter-help');
+helpButton.addEventListener( 'click', helpButtonClicked);
+
 

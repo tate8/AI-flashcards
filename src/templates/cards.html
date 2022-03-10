@@ -15,33 +15,53 @@
     </head>
     <body>                
         <div class="back-to-home">
-            <a href="{{ url_for('index') }}"><i class="fa fa-arrow-left"></i></a>
+            <a href="{{ url_for('index') }}"><i class="fa fa-arrow-left back-to-home"></i></a>
         </div>
 
-        <div class="flashcard-container">
-            
-            
-            <canvas class="paint-canvas"></canvas>
-
-
-            <div class="flashcard">
-                <div class="word">
-                    <h1>{{ word }}</h1>
-                </div>
-                <div class="tools">
-                    <i class="fa fa-eraser eraser"></i>
-                    <i class="fa fa-pencil pencil active"></i>
-                    <i class="fa fa-repeat clear"></i>
-                </div>
-
-                <a href="/new-word">
-                    <div class="new-word">
-                        <span>New</span>
+        <div class="flip-container">
+            <div class="front">
+                <div class="flashcard-container">
+                    <canvas class="paint-canvas"></canvas>
+        
+                    <div class="flashcard">
+                        <div class="word">
+                            <h1>{{ word }}</h1>
+                        </div>
+                        <div class="tools">
+                            <i class="fa fa-eraser eraser"></i>
+                            <i class="fa fa-pencil pencil active"></i>
+                            <i class="fa fa-repeat clear"></i>
+                        </div>
+                        <div class="help enter-help">
+                            <i class="fa fa-question"></i>
+                        </div>
+        
+                        <a href="/new-word">
+                            <div class="new-word">
+                                <span>New</span>
+                            </div>
+                        </a>
+        
+                        <div class="check-word">
+                            <a>Check</a>
+                        </div>
                     </div>
-                </a>
-
-                <div class="check-word">
-                    <a>Check</a>
+                </div>
+            </div>
+            <div class="back">
+                <div class="flashcard-container">
+                    <canvas class="label-canvas"></canvas>
+                    <div class="flashcard">
+                        <div class="word">
+                            <h1>{{ word }}</h1>
+                        </div>
+                        <div class="help exit-help">
+                            <i class="fa fa-times"></i>
+                        </div>
+                        <div class="tip">
+                            <h1>Tip: Could a human guess what you are drawing? If not, try switching up the perspective!</h1>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -56,6 +76,8 @@
 
     </body>
     <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.flip.min.js') }}"></script>
+
     <script src="../static/js/cards.js"></script>
  
 </html>

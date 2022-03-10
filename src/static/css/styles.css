@@ -131,6 +131,7 @@ html, body {
     top: 10px;
     left: 10px;
     font-size: 4rem;
+    z-index: 2;
 }
 .back-to-home * {
     color: black;
@@ -165,6 +166,14 @@ html, body {
     transform: translate(-50%, 0);
     width: max-content;
 }
+.tip {
+    font-size: 0.75rem;
+    position: absolute;
+    left: 50%;
+    bottom: -6.5rem;
+    transform: translate(-50%, 0);
+    width: 50vw;
+}
 
 .tools {
     font-size: 3rem;
@@ -178,17 +187,29 @@ html, body {
     cursor: pointer;
 }
 
+.help {
+    font-size: 4rem;
+    max-width: 5rem;
+    height: fit-content;
+    position: absolute;
+    right: -4rem;
+    bottom: 0rem;
+}
+.help *:hover {
+    cursor: pointer;
+}
+
 .new-word {
     /* Styling */
     background-color: rgb(92, 201, 250);
     font-family: 'Itim', serif;
     font-weight: bolder;
     font-size: 2rem;
-    padding: 5px 40px 5px 40px;
+    padding: 5px 2rem 5px 2rem;
 
     font-size: 1.5em;
     position: absolute;
-    right: 0;
+    left: 0;
     bottom: -5rem;
 
     /* for grow effect */
@@ -205,11 +226,11 @@ html, body {
     font-family: 'Itim', serif;
     font-weight: bolder;
     font-size: 2rem;
-    padding: 5px 40px 5px 40px;
+    padding: 5px 2rem 5px 2rem;
 
     font-size: 1.5em;
     position: absolute;
-    left: 0;
+    right: 0;
     bottom: -5rem;
 
     /* for grow effect */
@@ -247,6 +268,12 @@ html, body {
     position: absolute;
     display: block;
 }
+
+.label-canvas {
+    z-index: 1;
+    position: absolute;
+    display: block;
+}
   
 .active {
     color: rgb(92, 201, 250);
@@ -259,7 +286,6 @@ html, body {
     right: 10em;
     white-space: nowrap;
 }
-
 
 @media only screen and (max-width: 750px) {
     .robot-dialogue {

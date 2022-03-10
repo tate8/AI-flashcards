@@ -1,5 +1,5 @@
 
-from flask import Flask, render_template, redirect, url_for, request
+from flask import Flask, render_template, redirect, url_for, request, jsonify
 import random
 import json
 import numpy as np
@@ -91,24 +91,10 @@ def get_post_pixel_data():
 
     # now resize it to 28x28 which the machine learning model accepts
     # using openCV for the resizing
-    resized_image = cv2.resize(image, dsize=(28, 28), interpolation=cv2.INTER_CUBIC)
+    resized_image = cv2.resize(image, dsize=(28, 28), interpolation=cv2.INTER_NEAREST)
 
     # create numpy array of shape (1, 28, 28) for model
     model_input = np.array(resized_image, dtype=np.uint8).reshape((-1, 28, 28))
-
-    # debugging: this is what the model is accepting as input
-    # for i in range(28):
-    #     for j in range(28):
-    #         if model_input[0, i, j] < 10:
-    #             print(model_input[0, i, j], end="")
-    #             print("   ", end="")
-    #         elif model_input[0, i, j] < 100:
-    #             print(model_input[0, i, j], end="")
-    #             print("  ", end="")
-    #         else:
-    #             print(model_input[0, i, j], end="")
-    #             print(" ", end="")
-    #     print('')
 
     class_names = None
     # these class names' order are compatible with the model
@@ -135,8 +121,9 @@ def get_post_pixel_data():
     predict_classes = [c.rstrip() for c in predict_classes]
     word = word.rstrip()
 
+    status = 'failure'
     if word in predict_classes:
-        message = 'Nice, you got it right!'        
+        status = 'success'     
     else:
         message = f'Hmm, your {word} looks like a {top_prediction}. Try again!'
 
@@ -147,7 +134,29 @@ def get_post_pixel_data():
     # put updated data in storage file
     write_storage(data)
 
-    return ' '
+    # return status to javascript
+    # 'success' if user got word right
+    return status
+    
+
+
+@app.route('/get-label-data', methods=['GET', 'POST'])
+def get_label_data():
+    with open('label_data.json', 'r') as j_file:
+        label_data = json.load(j_file)
+
+    # get current word and send the label data for that word to the frontend
+    data = read_storage()
+    word = data['word'].rstrip()
+
+    # flatten label data to send back to javascript
+    flat_label_data = []
+    for row in label_data[word]:
+        for e in row:
+            flat_label_data.append(e)
+
+    
+    return jsonify(flat_label_data)
 
 
 
