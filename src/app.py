@@ -8,6 +8,7 @@ import math
 import os
 import tensorflow as tf
 
+from storage import Storage
 # this file holds the structure for the custom ResidualUnit layer in my CNN architecture
 from machine_learning.ResidualUnit import ResidualUnit
 
@@ -17,8 +18,7 @@ my_tf_saved_model = tf.keras.models.load_model('./machine_learning/my_doodle_mod
 app = Flask(__name__)
 app.secret_key = os.urandom(20)
 
-
-# helper functions
+storage = Storage('storage.json')
 
 def get_random_word():
     # get random category from categories text file and pass to template
@@ -26,15 +26,6 @@ def get_random_word():
         content_list = f.readlines()
     word = random.choice(content_list)
     return word
-
-def write_storage(data):
-    with open('storage.json', 'w') as j_file:
-        json.dump(data, j_file)
-
-def read_storage():
-    with open('storage.json', 'r') as j_file:
-        data = json.load(j_file)
-    return data
 
 
 @app.route('/')
@@ -45,14 +36,14 @@ def index():
         'word': word,
         'message': f'Can you draw a {word}?'
     }
-    write_storage(data)
+    storage.write(data)
 
     return render_template('index.html')
 
 
 @app.route('/new-word')
 def new_word():
-    data = read_storage()
+    data = storage.read()
 
     word = get_random_word()
     message = f'Can you draw a {word}?'
@@ -61,13 +52,13 @@ def new_word():
         'message': message
     }
 
-    write_storage(data)
+    storage.write(data)
 
     return render_template('cards.html', word=word, message=message)
 
 @app.route('/cards')
 def cards():
-    data = read_storage()
+    data = storage.read()
     word = data['word']
     message = data['message']
 
@@ -112,7 +103,7 @@ def get_post_pixel_data():
     ##### UPDATE MESSAGE
 
     # get data in storage file
-    data = read_storage()
+    data = storage.read()
 
     word = data['word']
     message = ''
@@ -132,7 +123,7 @@ def get_post_pixel_data():
         'message': message
     }
     # put updated data in storage file
-    write_storage(data)
+    storage.write(data)
 
     # return status to javascript
     # 'success' if user got word right
@@ -146,7 +137,7 @@ def get_label_data():
         label_data = json.load(j_file)
 
     # get current word and send the label data for that word to the frontend
-    data = read_storage()
+    data = storage.read()
     word = data['word'].rstrip()
 
     # flatten label data to send back to javascript
