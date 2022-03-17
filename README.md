@@ -1,4 +1,4 @@
-# AI Flashcards - 2022 Individual Programming Project
+# AI Flashcards
 
 
 
